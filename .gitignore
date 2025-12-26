@@ -6,3 +6,7 @@ build/
 *.log
 AppData/
 .git-backup/
+
+# Environment files
+.env.local
+.env.*
