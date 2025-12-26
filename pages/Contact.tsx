@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Magnetic } from '../components/Magnetic';
@@ -114,7 +113,44 @@ export const Contact: React.FC = () => {
             animate="visible"
             variants={containerVariants}
           >
-            <form onSubmit={handleFormSubmit} className="space-y-10">
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget as HTMLFormElement;
+                const formData = new FormData(form);
+                const payload = {
+                  name: formData.get('name')?.toString().trim(),
+                  email: formData.get('email')?.toString().trim(),
+                  message: formData.get('message')?.toString().trim()
+                };
+                // basic client-side validation
+                if (!payload.name || !payload.email || !payload.message) {
+                  alert('Please fill all fields.');
+                  return;
+                }
+                (e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = true;
+                try {
+                  const r = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                  });
+                  if (r.ok) {
+                    alert('Message sent — thank you!');
+                    form.reset();
+                  } else {
+                    const j = await r.json().catch(() => ({}));
+                    alert('Send failed: ' + (j.error || 'unknown'));
+                  }
+                } catch {
+                  alert('Network error');
+                } finally {
+                  (e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = false;
+                }
+              }}
+              aria-label="Contact form"
+              className="space-y-10"
+            >
               <FormInput name="name" placeholder="Name" />
               <FormInput name="email" placeholder="Email" type="email" />
               <FormInput name="subject" placeholder="Subject" />

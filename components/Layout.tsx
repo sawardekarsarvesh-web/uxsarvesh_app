@@ -40,7 +40,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, theme, toggleTheme }) 
         }`}
       >
         <div className="max-w-[1024px] mx-auto h-full px-6 md:px-12 flex items-center justify-between">
-          <Link to="/" className="text-xl font-extrabold tracking-apple hover:opacity-70 transition-opacity">
+          <Link to="/" className="text-xl font-extrabold tracking-apple text-[#86868b] dark:text-[#f5f5f7] hover:opacity-70 transition-opacity">
             uxSarvesh
           </Link>
 

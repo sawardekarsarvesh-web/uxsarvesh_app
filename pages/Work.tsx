@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { PROJECTS } from '../constants';
@@ -86,7 +85,7 @@ const FeaturedProject: React.FC<{ project: Project; index: number }> = ({ projec
             <div className="space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest text-[#86868b]">{project.tagline}</span>
               <div className="flex">
-                <span className="glass px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] border border-black/[0.05] dark:border-white/10 text-emerald-600 dark:text-emerald-400 shadow-sm">
+                        <span className="glass px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] border border-black/[0.05] dark:border-white/10 text-white dark:text-emerald-400 shadow-sm">
                   {project.category}
                 </span>
               </div>
@@ -176,28 +175,28 @@ const BentoGrid = () => {
       desc: "Creating atomic structures for global fintech brands.", 
       span: "md:col-span-2",
       align: "top",
-      image: "./assets/svgs/scalable-design-systems.svg" 
+      image: '/images/scalabledesignsystems.jpg', 
     },
     { 
       title: "Accessibility", 
       desc: "WCAG 2.1 AA Standards.", 
       span: "md:col-span-1",
       align: "top",
-      image: "./assets/svgs/accessibility.svg"
+      image: '/images/accessibility.jpg'
     },
     { 
       title: "Prototyping", 
       desc: "High fidelity micro-interactions.", 
       span: "md:col-span-1",
       align: "bottom",
-      image: "./assets/svgs/prototyping.svg"
+      image: '/images/prototyping.jpg'
     },
     { 
       title: "User Research", 
       desc: "Data-driven decision making for enterprise software.", 
       span: "md:col-span-2",
       align: "bottom",
-      image: "./assets/svgs/user-research.svg"
+      image: '/images/userresearch.jpg'
     }
   ];
 
@@ -217,7 +216,9 @@ const BentoGrid = () => {
               <motion.img 
                 src={item.image} 
                 alt={item.title} 
-                className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000 p-10" 
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/40 via-transparent to-[#050505]/80" />
               <div className="absolute inset-0 bg-[#050505]/10 group-hover:bg-emerald-500/5 transition-colors duration-700" />

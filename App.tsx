@@ -18,7 +18,7 @@ const AnimatedRoutes = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <Routes location={location}>
         <Route path="/" element={<Work />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
@@ -28,24 +28,18 @@ const AnimatedRoutes = () => {
 };
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem('theme');
-    return (saved as Theme) || 'dark';
-  });
+  // Force dark mode for the entire site regardless of system preference
+  const [theme] = useState<Theme>('dark');
 
   useEffect(() => {
     const root = window.document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    root.classList.add('dark');
+    // persist the preference as dark
+    try { localStorage.setItem('theme', 'dark'); } catch {}
+  }, []);
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
-  };
+  // No-op toggle to keep components that expect a toggle function working
+  const toggleTheme = () => {}; 
 
   return (
     <Router>
