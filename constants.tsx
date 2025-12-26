@@ -61,19 +61,19 @@ export const EXPERIENCES: Experience[] = [
     role: 'UI UX Designer',
     company: 'Impactguru',
     period: '2021 - 2023',
-    description: 'Led design for platforms like Carepal Website, Carepal Money, and Impactguru Donor App. Owned UX research, wireframes, UI kits, and brand consistency across campaigns.'
+    description: 'Designed end-to-end UX/UI for Carepal Website, Carepal Money (healthcare financing), and ImpactGuru Donor App — products spanning healthcare crowdfunding and financial services.'
   },
   {
     role: 'Associate UI UX Designer',
     company: 'Fluidscapes Consultants Pvt Ltd.',
     period: '2019 - 2021',
-    description: 'Led design for platforms like Fluidscapes.in Website and BJP4Maharashtra mobile app.'
+    description: 'Designed UX/UI for marketing platforms, campaign dashboards, and websites, applying user-centred design principles to improve engagement and conversion.'
   },
   {
     role: 'Associate UI UX Designer',
     company: 'Powerweave Software Solutions Pvt Ltd.',
     period: '2018 - 2019',
-    description: 'Designed product mockups, icons, and promotional visuals for international clients.'
+    description: 'Created product mockups, icons, and promotional visual assets for international clients, building foundational skills in visual design, typography, and brand communication.'
   }
 ];
 

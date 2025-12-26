@@ -61,11 +61,16 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
           transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="aspect-[21/9] w-full rounded-[40px] overflow-hidden shadow-2xl bg-gray-100 dark:bg-zinc-900 border border-black/[0.03] dark:border-white/[0.05]"
         >
-          <img 
-            src={heroImage} 
-            alt={title} 
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            <source srcSet={heroImage.replace(/\.(jpe?g|png)$/i, '.webp')} type="image/webp" />
+            <img 
+              src={heroImage} 
+              alt={title} 
+              loading="eager"
+              decoding="sync"
+              className="w-full h-full object-cover"
+            />
+          </picture>
         </motion.div>
       </section>
 

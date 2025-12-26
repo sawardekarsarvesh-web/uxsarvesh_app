@@ -96,7 +96,13 @@ export const Contact: React.FC = () => {
                 <Magnetic strength={0.2}>
                    <a href="https://www.behance.net/sarveshsawarde" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4">
                     <div className="w-14 h-14 rounded-full flex items-center justify-center bg-black/[0.03] dark:bg-white/[0.03] group-hover:bg-emerald-500/10 transition-colors duration-300">
-                      <img src="/icons/behance.svg" alt="Behance" className="w-6 h-6 object-contain" aria-hidden="true" />
+                      <svg width="24" height="24" viewBox="0 0 24 23.98" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-[#86868b] group-hover:text-[#1D1D1F] dark:group-hover:text-white transition-colors duration-300" aria-hidden="true">
+                        <g>
+                          <path d="M9.29,8.75h-2.63v2.09h2.46c.44,0,.82-.11.82-1.12s-.65-.97-.65-.97ZM9.29,12.37h-2.63v2.66h2.47c.38,0,1.1-.15,1.1-1.29.02-1.35-.95-1.37-.95-1.37Z" />
+                          <path d="M17.97,0H6.01C2.7,0,0,2.7,0,6.01v11.97c0,3.29,2.7,6,6.01,6h11.97c3.31,0,6.01-2.7,6.01-6.01V6.01c-.02-3.31-2.72-6.01-6.03-6.01ZM14.08,7.61h4v.95h-4v-.95ZM12.22,13.87c0,2.97-2.93,3.06-2.93,3.06h-4.72V7.04h4.7c1.47,0,2.63.84,2.63,2.59s-1.41,1.85-1.41,1.85c1.87-.02,1.73,2.4,1.73,2.4ZM19.39,13.7h-4.82c0,1.9,1.64,1.75,1.64,1.75,1.54,0,1.48-.99,1.48-.99h1.64c0,2.66-3.18,2.55-3.18,2.55-3.81,0-3.56-3.75-3.56-3.75,0,0,0-3.77,3.56-3.77,3.75-.02,3.24,4.21,3.24,4.21h0Z" />
+                          <path d="M16.2,10.87c-1.43,0-1.64,1.5-1.64,1.5h3.05s.02-1.5-1.41-1.5Z" />
+                        </g>
+                      </svg>
                     </div>
                     <span className="text-lg font-bold text-[#86868b] group-hover:text-[#1D1D1F] dark:group-hover:text-white transition-colors duration-300">Behance</span>
                   </a>

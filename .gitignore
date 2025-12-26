@@ -10,3 +10,6 @@ AppData/
 # Environment files
 .env.local
 .env.*
+
+.vercel
+.env*.local

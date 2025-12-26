@@ -48,11 +48,16 @@ export const About: React.FC = () => {
             className="lg:sticky lg:top-32"
           >
             <div className="aspect-[4/5] bg-gray-100 dark:bg-zinc-900 rounded-[40px] overflow-hidden shadow-2xl border border-black/[0.03] dark:border-white/[0.05]">
-              <img 
-                src="/images/Sarvesh.jpg" 
-                alt="Sarvesh Sawardekar" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
-              />
+              <picture>
+                <source srcSet="/images/Sarvesh.webp" type="image/webp" />
+                <img 
+                  src="/images/Sarvesh.jpg" 
+                  alt="Sarvesh Sawardekar" 
+                  loading="eager"
+                  decoding="sync"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
+                />
+              </picture>
             </div>
           </motion.div>
 
