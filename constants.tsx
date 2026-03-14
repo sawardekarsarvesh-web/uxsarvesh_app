@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
     description: 'Invest in 24k gold daily for the price of a cup of chai. A revolutionary micro-investing platform designed to make wealth creation accessible, secure, and effortless for everyone.',
     image: '/images/project1.jpg',
     category: 'Fintech',
-    link: 'https://www.figma.com/proto/lPSvl9AWQaL5s1AQCuWfF8/Sarvesh---Case-Study?node-id=2246-1301&p=f&t=8Wue6ZIcs5lhry7V-1&scaling=contain&content-scaling=fixed&page-id=2242%3A998',
+    link: 'https://www.figma.com/proto/lPSvl9AWQaL5s1AQCuWfF8/Sarvesh---Case-Study?node-id=2246-1301&t=ZVpIg2cDz2hmR8Ln-1&scaling=min-zoom&content-scaling=fixed&page-id=2242%3A998',
     featured: true
   },
   {
